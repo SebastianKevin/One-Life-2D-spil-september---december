@@ -1,0 +1,10 @@
+{
+    "name": "Unity55485dbf4c0aa8bb9d5f.MainMenuPics.Editor",
+    "references": [
+      "Unity55485dbf4c0aa8bb9d5f.MainMenuPics"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}
