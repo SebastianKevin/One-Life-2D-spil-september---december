@@ -1,4 +1,6 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Health : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class Health : MonoBehaviour
     {
         currentHealth = maxHealth;
     }
+    [SerializeField] private int damage = 10;
 
     public void TakeDamage(int damage)
     {
@@ -21,7 +24,7 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
-        // Handle player death logic
+        Vector2 position = new Vector2(0, 0);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
