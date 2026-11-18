@@ -34,6 +34,6 @@ public class Health_Player : MonoBehaviour
     {
         if(other == transform.root) return; // Ignore collisions with self
 
-        other.GetComponent<Health>()?.TakeDamage(damage);
+        other.GetComponent<Health_Player>()?.TakeDamage(damage);
     }
 }
