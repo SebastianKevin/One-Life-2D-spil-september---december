@@ -6,14 +6,14 @@ using UnityEngine.UIElements;
 public class Health_Player : MonoBehaviour
 {
     public bool Player_Dead = false;
-    private int currentHealth = 100;
-    [SerializeField] private int maxHealth = 100;
+    private int currentHealth = 3;
+    [SerializeField] private int maxHealth = 3;
 
     private void Start()
     {
         currentHealth = maxHealth;
     }
-    [SerializeField] private int damage = 10;
+    [SerializeField] private int damage = 1;
 
     public void TakeDamage(int damage)
     {
