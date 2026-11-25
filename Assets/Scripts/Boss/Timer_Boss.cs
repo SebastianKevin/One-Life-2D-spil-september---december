@@ -1,10 +1,10 @@
 using UnityEngine;
 
-
 public class BossTimer : MonoBehaviour
 {
+    public Animator animator;
     [SerializeField]
-    public float tidTilbage = 10f;
+    public float tidTilbage = 10.0f;
     public bool Boss_Dead;
 
     void Update()
@@ -15,6 +15,8 @@ public class BossTimer : MonoBehaviour
         {
             Boss_Dead = true;
             gameObject.SetActive(false);
+            //animator.SetBool("Is_Dead", true);
+
         }
     }
 }

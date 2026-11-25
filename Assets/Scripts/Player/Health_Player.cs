@@ -23,16 +23,16 @@ public class Health_Player : MonoBehaviour
             Die();
         }
     }
-
+    
     private void Die()
     {
         Player_Dead = true;
         gameObject.SetActive(false);
     }
-
+ 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other == transform.root) return; // Ignore collisions with self
+        if(other == transform.root) return; // Ignore collisions med sig selv
 
         other.GetComponent<Health_Player>()?.TakeDamage(damage);
     }

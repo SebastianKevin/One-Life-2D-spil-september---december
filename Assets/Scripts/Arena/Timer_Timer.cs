@@ -6,8 +6,20 @@ public class Timer : MonoBehaviour
     [SerializeField] public float tidTilbage = 10f;
     [SerializeField] private TMP_Text timerText;
 
+    private void Start()
+    {
+        tidTilbage = 10f;
+    }
+
     void Update()
     {
+        if (tidTilbage <= 0f)
+        {
+            tidTilbage = 0f;
+            timerText.text = "00:00";
+            enabled = false; // Stops Update() from running until re-enabled
+            return;
+        }
 
         tidTilbage -= Time.deltaTime;
 
@@ -17,10 +29,5 @@ public class Timer : MonoBehaviour
         int sekunder = sekunderTilbage % 60;
 
         timerText.text = $"{minutter:00}:{sekunder:00}";
-
-        if (tidTilbage <= 0f)
-        {
-            timerText.text = "00:00";
-        }
     }
 }

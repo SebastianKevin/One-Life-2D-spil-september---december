@@ -15,6 +15,14 @@ public class Health_Boss : MonoBehaviour
     }
     [SerializeField] private int damage = 10;
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Spear"))
+        {
+            TakeDamage(damage);
+        }
+    }
+
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -28,12 +36,5 @@ public class Health_Boss : MonoBehaviour
     {
         Boss_Dead = true;
         gameObject.SetActive(false);
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other == transform.root) return; // Ignore collisions with self
-
-        other.GetComponent<Health_Boss>()?.TakeDamage(damage);
     }
 }

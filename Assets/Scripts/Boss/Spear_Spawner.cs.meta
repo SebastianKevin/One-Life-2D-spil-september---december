@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: fb51b387e56670346b56c385efbd6255
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - spearHeadPrefab: {fileID: 6279701874620395035, guid: dc1cf2ebc90678e4aac826e29a507b09, type: 3}
+  - spearBasePrefab: {fileID: 6369912072881053025, guid: c075ab1aeeec9454bb48c1439377a293, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
